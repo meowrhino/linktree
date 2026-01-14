@@ -27,30 +27,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 33dvh 1rem;
 }
 
 .container {
   width: 100%;
-  max-width: 720px;
+  max-width: 520px;
   margin: 0 auto;
-}
-
-/* Header */
-.header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.header h1 {
-  font-size: 2rem;
-  color: var(--text);
-  margin-bottom: 0.5rem;
-}
-
-.header p {
-  color: var(--text-muted);
-  font-size: 1rem;
 }
 
 /* Links Container */
@@ -88,11 +71,11 @@ body {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem 1.25rem;
+  padding: 0.8rem 0.9rem;
   text-decoration: none;
   color: var(--text);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: all 0.2s ease;
   display: block;
   text-align: center;
@@ -152,9 +135,9 @@ body {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem 1.25rem;
+  padding: 0.8rem 0.9rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--text);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -209,9 +192,10 @@ body {
 
 /* Branding Badge */
 .branding-badge {
-  margin: 3rem 0 2rem;
+  margin: 2rem 0 1.5rem;
   text-align: center;
   color: var(--text);
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
@@ -224,26 +208,4 @@ body {
 
 .branding-badge a:hover {
   color: var(--primary-dark);
-}
-
-/* Responsive */
-@media (max-width: 640px) {
-  .header h1 {
-    font-size: 1.5rem;
-  }
-
-  .header p {
-    font-size: 0.9rem;
-  }
-
-  .link-btn,
-  .dropdown-btn {
-    padding: 0.875rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .branding-badge {
-    margin: 2rem 0 1.5rem;
-    font-size: 0.95rem;
-  }
 }

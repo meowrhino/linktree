@@ -21,34 +21,36 @@
     "items": [
       {
         "name": "colorfun",
-        "url": "https://meowrhino.github.io/colorfun/",
+        "url": "https://meowrhino.github.io/colorFun/",
         "status": "finished"
       }
-    ]
-  },
-  {
-    "name": "formateadores",
-    "isDropdown": true,
-    "items": [
+    ],
+    "dropdowns": [
       {
-        "name": "jaume",
-        "url": "https://jaumeclotet.com/formateador.html",
-        "status": "finished"
-      },
-      {
-        "name": "paula",
-        "url": "https://meowrhino.github.io/paulabarjau/formateador.html",
-        "status": "finished"
-      },
-      {
-        "name": "miranda",
-        "url": "https://meowrhino.github.io/mirandaperezhita/formateador.html",
-        "status": "finished"
-      },
-      {
-        "name": "andrea",
-        "url": "https://meowrhino.github.io/andreacarilla/formateador.html",
-        "status": "finished"
+        "name": "formateadores",
+        "isDropdown": true,
+        "items": [
+          {
+            "name": "jaume",
+            "url": "https://jaumeclotet.com/formateador.html",
+            "status": "finished"
+          },
+          {
+            "name": "paula",
+            "url": "https://meowrhino.github.io/paulabarjau/formateador.html",
+            "status": "finished"
+          },
+          {
+            "name": "miranda",
+            "url": "https://meowrhino.github.io/mirandaperezhita/formateador.html",
+            "status": "finished"
+          },
+          {
+            "name": "andrea",
+            "url": "https://meowrhino.github.io/andreacarilla/formateador.html",
+            "status": "finished"
+          }
+        ]
       }
     ]
   },
@@ -64,33 +66,39 @@
       {
         "name": "generador facturas",
         "url": "https://meowrhino.github.io/generadorFacturas/",
-        "status": "finished"
+        "status": "beta"
       }
     ]
   },
   {
-    "name": "webs terminadas",
-    "isDropdown": true,
-    "items": [
+    "name": "portfolio",
+    "isDropdown": false,
+    "dropdowns": [
       {
-        "name": "jaume",
-        "url": "https://jaumeclotet.com/",
-        "status": "finished"
-      },
-      {
-        "name": "paula",
-        "url": "https://meowrhino.github.io/paulabarjau/",
-        "status": "finished"
-      },
-      {
-        "name": "miranda",
-        "url": "https://meowrhino.github.io/mirandaperezhita/",
-        "status": "finished"
-      },
-      {
-        "name": "andrea",
-        "url": "https://meowrhino.github.io/andreacarilla/",
-        "status": "finished"
+        "name": "webs terminadas",
+        "isDropdown": true,
+        "items": [
+          {
+            "name": "jaume",
+            "url": "https://jaumeclotet.com/",
+            "status": "finished"
+          },
+          {
+            "name": "paula",
+            "url": "https://meowrhino.github.io/paulabarjau/",
+            "status": "finished"
+          },
+          {
+            "name": "miranda",
+            "url": "https://meowrhino.github.io/mirandaperezhita/",
+            "status": "finished"
+          },
+          {
+            "name": "andrea",
+            "url": "https://meowrhino.github.io/andreacarilla/",
+            "status": "finished"
+          }
+        ]
       }
     ]
   }

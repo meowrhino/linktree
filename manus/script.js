@@ -25,18 +25,7 @@ function createGroupElement(group) {
   groupDiv.className = 'link-group';
   
   if (group.isDropdown) {
-    // Crear dropdown
-    const dropdownBtn = createDropdownButton(group.name);
-    const dropdownContent = createDropdownContent(group.items);
-    
-    groupDiv.appendChild(dropdownBtn);
-    groupDiv.appendChild(dropdownContent);
-    
-    // Event listener para toggle
-    dropdownBtn.addEventListener('click', () => {
-      dropdownBtn.classList.toggle('active');
-      dropdownContent.classList.toggle('open');
-    });
+    appendDropdown(groupDiv, group);
   } else {
     // Crear grupo normal con título
     const titleElement = document.createElement('div');
@@ -46,9 +35,15 @@ function createGroupElement(group) {
     const itemsContainer = document.createElement('div');
     itemsContainer.className = 'link-items';
     
-    group.items.forEach(item => {
+    const items = group.items || [];
+    items.forEach(item => {
       const linkElement = createLinkElement(item);
       itemsContainer.appendChild(linkElement);
+    });
+
+    const dropdowns = group.dropdowns || [];
+    dropdowns.forEach(dropdown => {
+      appendDropdown(itemsContainer, dropdown);
     });
     
     groupDiv.appendChild(titleElement);
@@ -56,6 +51,21 @@ function createGroupElement(group) {
   }
   
   return groupDiv;
+}
+
+// Añadir un dropdown al contenedor
+function appendDropdown(container, dropdownGroup) {
+  const dropdownBtn = createDropdownButton(dropdownGroup.name);
+  const dropdownContent = createDropdownContent(dropdownGroup.items || []);
+  
+  container.appendChild(dropdownBtn);
+  container.appendChild(dropdownContent);
+  
+  // Event listener para toggle
+  dropdownBtn.addEventListener('click', () => {
+    dropdownBtn.classList.toggle('active');
+    dropdownContent.classList.toggle('open');
+  });
 }
 
 // Crear botón de dropdown
