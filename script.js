@@ -35,16 +35,27 @@ function createGroupElement(group) {
     const itemsContainer = document.createElement('div');
     itemsContainer.className = 'link-items';
     
-    const items = group.items || [];
-    items.forEach(item => {
-      const linkElement = createLinkElement(item);
-      itemsContainer.appendChild(linkElement);
-    });
-
     const dropdowns = group.dropdowns || [];
-    dropdowns.forEach(dropdown => {
-      appendDropdown(itemsContainer, dropdown);
-    });
+    const items = group.items || [];
+    const appendItems = () => {
+      items.forEach(item => {
+        const linkElement = createLinkElement(item);
+        itemsContainer.appendChild(linkElement);
+      });
+    };
+    const appendDropdowns = () => {
+      dropdowns.forEach(dropdown => {
+        appendDropdown(itemsContainer, dropdown);
+      });
+    };
+
+    if (group.dropdownsFirst) {
+      appendDropdowns();
+      appendItems();
+    } else {
+      appendItems();
+      appendDropdowns();
+    }
     
     groupDiv.appendChild(titleElement);
     groupDiv.appendChild(itemsContainer);
@@ -55,11 +66,14 @@ function createGroupElement(group) {
 
 // Añadir un dropdown al contenedor
 function appendDropdown(container, dropdownGroup) {
+  const dropdownGroupElement = document.createElement('div');
+  dropdownGroupElement.className = 'dropdown-group';
   const dropdownBtn = createDropdownButton(dropdownGroup.name);
   const dropdownContent = createDropdownContent(dropdownGroup.items || []);
   
-  container.appendChild(dropdownBtn);
-  container.appendChild(dropdownContent);
+  dropdownGroupElement.appendChild(dropdownBtn);
+  dropdownGroupElement.appendChild(dropdownContent);
+  container.appendChild(dropdownGroupElement);
   
   // Event listener para toggle
   dropdownBtn.addEventListener('click', () => {

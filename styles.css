@@ -47,7 +47,7 @@ body {
 .links-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 /* Group */
@@ -74,20 +74,26 @@ body {
 }
 
 /* Link Button */
-.link-btn {
+.link-btn,
+.dropdown-btn {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 0.8rem 0.9rem;
-  text-decoration: none;
   color: var(--text);
   font-weight: 600;
   font-size: 0.85rem;
+  line-height: 1.2;
   transition: all 0.2s ease;
-  display: block;
-  text-align: center;
   box-shadow: var(--shadow);
   cursor: pointer;
+  font-family: inherit;
+}
+
+.link-btn {
+  text-decoration: none;
+  display: block;
+  text-align: center;
   position: relative;
 }
 
@@ -164,22 +170,18 @@ body {
 }
 
 /* Dropdown */
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .dropdown-btn {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 0.8rem 0.9rem;
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: var(--shadow);
-  font-family: inherit;
   width: 100%;
 }
 
@@ -220,7 +222,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding-top: 0.5rem;
+  margin-top: 0;
+  transition: margin-top 0.2s ease;
+}
+
+.dropdown-content.open .dropdown-inner {
+  margin-top: 0.5rem;
 }
 
 /* Branding Badge */

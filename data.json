@@ -31,11 +31,6 @@
         "isDropdown": true,
         "items": [
           {
-            "name": "jaume",
-            "url": "https://jaumeclotet.com/formateador.html",
-            "status": "finished"
-          },
-          {
             "name": "paula",
             "url": "https://meowrhino.github.io/paulabarjau/formateador.html",
             "status": "finished"
@@ -48,6 +43,11 @@
           {
             "name": "andrea",
             "url": "https://meowrhino.github.io/andreacarilla/formateador.html",
+            "status": "finished"
+          },
+          {
+            "name": "jaume",
+            "url": "https://meowrhino.github.io/jaumeclotet/formateador.html",
             "status": "finished"
           }
         ]
@@ -68,21 +68,42 @@
         "url": "https://meowrhino.github.io/generadorFacturas/",
         "status": "finished"
       }
+    ],
+    "dropdowns": [
+      {
+        "name": "wip",
+        "isDropdown": true,
+        "items": [
+          {
+            "name": "apuntes autonomos",
+            "url": "https://meowrhino.github.io/faqAutonomos/",
+            "status": "wip"
+          },
+          {
+            "name": "calculador de hacienda",
+            "url": "https://meowrhino.github.io/taxrhino/",
+            "status": "wip"
+          }
+        ]
+      }
     ]
   },
   {
     "name": "portfolio",
     "isDropdown": false,
+    "dropdownsFirst": true,
+    "items": [
+      {
+        "name": "meowrhino.studio",
+        "url": "https://meowrhino.studio",
+        "status": "finished"
+      }
+    ],
     "dropdowns": [
       {
         "name": "webs terminadas",
         "isDropdown": true,
         "items": [
-          {
-            "name": "jaume",
-            "url": "https://jaumeclotet.com/",
-            "status": "finished"
-          },
           {
             "name": "paula",
             "url": "https://meowrhino.github.io/paulabarjau/",
@@ -96,6 +117,16 @@
           {
             "name": "andrea",
             "url": "https://meowrhino.github.io/andreacarilla/",
+            "status": "finished"
+          },
+          {
+            "name": "jaume",
+            "url": "https://meowrhino.github.io/jaumeclotet/",
+            "status": "finished"
+          },
+          {
+            "name": "berta esteve",
+            "url": "https://meowrhino.github.io/snerta/",
             "status": "finished"
           }
         ]
