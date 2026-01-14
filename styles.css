@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #7c5aa8;
+  --primary-dark: #6a4b90;
+  --primary-light: #faf5ff;
+  --bg: #faf9fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Links Container */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Group */
+.link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.group-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: lowercase;
+  letter-spacing: 0.025em;
+  padding-left: 0.25rem;
+}
+
+/* Link Items */
+.link-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Link Button */
+.link-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  display: block;
+  text-align: center;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  position: relative;
+}
+
+.link-btn:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.link-btn:active {
+  transform: translateY(0);
+}
+
+/* Status Badge */
+.link-btn sup {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 0.35rem;
+  opacity: 0.7;
+}
+
+/* Status Styles */
+.link-btn.status-wip,
+.link-btn.status-beta,
+.link-btn.status-test {
+  opacity: 0.6;
+  background: #f9fafb;
+}
+
+.link-btn.status-wip:hover,
+.link-btn.status-beta:hover,
+.link-btn.status-test:hover {
+  opacity: 0.8;
+}
+
+.link-btn.status-wip sup {
+  color: #f59e0b;
+}
+
+.link-btn.status-beta sup {
+  color: #3b82f6;
+}
+
+.link-btn.status-test sup {
+  color: #8b5cf6;
+}
+
+/* Dropdown */
+.dropdown-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow);
+  font-family: inherit;
+  width: 100%;
+}
+
+.dropdown-btn:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.dropdown-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-btn.active .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  overflow: hidden;
+}
+
+.dropdown-content.open {
+  grid-template-rows: 1fr;
+}
+
+.dropdown-inner {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+/* Branding Badge */
+.branding-badge {
+  margin: 3rem 0 2rem;
+  text-align: center;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.branding-badge a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.branding-badge a:hover {
+  color: var(--primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .link-btn,
+  .dropdown-btn {
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .branding-badge {
+    margin: 2rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+}
