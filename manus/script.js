@@ -105,16 +105,17 @@ function createLinkElement(item) {
   link.className = `link-btn status-${item.status}`;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
-  
-  // Texto del link
-  let linkText = item.name;
-  
-  // Añadir badge de estado si no es finished
+  link.textContent = item.name;
+
+  // Añadir badges de estado si no es finished
   if (item.status !== 'finished') {
-    linkText += `<sup>${item.status}</sup>`;
+    ['left', 'right'].forEach(position => {
+      const badge = document.createElement('sup');
+      badge.className = `status-badge badge-${position}`;
+      badge.textContent = item.status;
+      link.appendChild(badge);
+    });
   }
-  
-  link.innerHTML = linkText;
   
   return link;
 }
