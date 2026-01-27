@@ -11,7 +11,7 @@
       {
         "name": "videoToWeb",
         "url": "https://meowrhino.github.io/videoToWeb/",
-        "status": "finished"
+        "status": "beta"
       }
     ]
   },
@@ -115,6 +115,11 @@
             "status": "finished"
           },
           {
+            "name": "estructuras3000",
+            "url": "https://meowrhino.github.io/e300/",
+            "status": "finished"
+          },
+          {
             "name": "andrea",
             "url": "https://meowrhino.github.io/andreacarilla/",
             "status": "finished"
@@ -127,6 +132,21 @@
           {
             "name": "berta esteve",
             "url": "https://meowrhino.github.io/snerta/",
+            "status": "finished"
+          },
+          {
+            "name": "rikamichie",
+            "url": "https://meowrhino.github.io/rikamichie/",
+            "status": "finished"
+          },
+          {
+            "name": "mikexs cd's",
+            "url": "https://meowrhino.github.io/mikesx/",
+            "status": "finished"
+          },
+          {
+            "name": "elmundodelasjordis",
+            "url": "https://meowrhino.github.io/elmundodelasjordis/",
             "status": "finished"
           }
         ]
